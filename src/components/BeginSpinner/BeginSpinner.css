@@ -1,0 +1,49 @@
+.spinner-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    background-color: var(--bs-section-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 100;
+}
+
+.spinner-overlay .spinner {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--bs-primary);
+
+    /* 
+    animation-duration: 0.75s;  المدة كلها 
+    animation-timing-function: linear;  التابع بشكل خطي مستمر
+    animation-delay: 0s;  تأخير
+    animation-iteration-count: infinite;  عدد المرات لا نهائي
+    animation-direction: normal; اتجاه
+    animation-fill-mode: none;  لون الملأ
+    animation-play-state: running;  الحالة الابتدائية للتشغيل
+    animation-name: spinner-grow;  الاسم
+    */
+    animation: spinner-grow .75s linear infinite;
+
+    transform: scale(0);
+}
+
+/* Animation Grow */
+
+@keyframes spinner-grow {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(0.8);
+        opacity: 1;
+    }
+}

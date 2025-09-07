@@ -1,0 +1,36 @@
+.services .content .part {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    align-items: center;
+}
+
+.services .content .part.space {
+    margin-bottom: 24px;
+}
+
+/* Responsive Services */
+@media screen and (max-width:1040px) {
+    .services {
+        width: 85%;
+    }
+
+    .services .content .part.space {
+        margin-bottom: 0px;
+    }
+
+    .services .content .part {
+        flex-wrap: wrap;
+        gap: 0;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .services {
+        width: 100%;
+    }
+
+    .services .content .part {
+        flex-direction: column;
+    }
+}

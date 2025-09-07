@@ -1,0 +1,251 @@
+.page {
+    margin-block: 50px;
+}
+
+.about-us .part-one {
+    display: flex;
+    justify-content: space-between;
+    gap: 48px;
+    align-items: center;
+    height: 100%;
+
+    margin-bottom: 96px;
+}
+
+.about-us .part-one .image {
+    width: 41.6%;
+    border-radius: 8px;
+}
+
+.about-us .part-one .text {
+    width: 61%;
+}
+
+.about-us .part-one .image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.about-us .part-one .text .title-section h1 {
+    margin-bottom: 24px;
+}
+
+.about-us .part-one .text .paragraph {
+    color: var(--bs-light-gray);
+    font-family: var(--font-opensans);
+    font-size: 16px;
+    margin-bottom: 24px;
+}
+
+.about-us .part-one .text .list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.about-us .part-one .text ul {
+    font-family: var(--font-opensans);
+    font-size: 16px;
+    color: var(--bs-dark);
+    padding-inline: 12px;
+}
+
+.about-us .part-one .text ul li {
+    margin-bottom: 24px;
+}
+
+.about-us .part-one .text ul li .icon {
+    color: var(--bs-primary);
+    margin-right: 8px;
+}
+
+.about-us .part-one .text .button {
+    /* if icon exists*/
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: max-content;
+    padding: 16px 48px;
+}
+
+/* part two styling */
+.about-us .part-two {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    align-items: center;
+}
+
+.about-us .part-two .cards {
+    width: 58.3%;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    align-items: flex-start;
+
+    margin-top: 24px;
+}
+
+.cards>.about-card:first-child p {
+    max-width: min-content;
+    margin: 0 auto;
+}
+
+
+/* video  */
+.about-us .part-two .video {
+    width: 41.6%;
+    height: 400px;
+
+    margin-top: 24px;
+
+    position: relative;
+}
+
+.about-us .part-two .video img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.about-us .part-two .video .btn-video-icon {
+    width: 100px;
+    height: 100px;
+    background: var(--bs-section-white);
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    cursor: pointer;
+}
+
+/* Arrow */
+.about-us .part-two .video .btn-video-icon span {
+    width: 0;
+    height: 0;
+
+    border-left: 32px solid var(--bs-dark);
+    border-top: 22px solid transparent;
+    border-bottom: 22px solid transparent;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* pulse border with color primary and animation */
+
+
+.about-us .part-two .video .pulse-border-animate {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background: var(--bs-primary);
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    animation: pulse-border 1500ms ease-out infinite;
+
+}
+
+@keyframes pulse-border {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+}
+
+/* Responsive About us */
+@media screen and (max-width:1342px) and (min-width:992px) {
+
+    .about-us .part-one .image {
+        width: 30%;
+    }
+
+    .about-us .part-one .text {
+        width: 65%;
+    }
+
+    .about-us .part-one .text ul {
+        font-size: 14px;
+    }
+
+    .about-us .part-one .text .title-section h1 {
+        font-size: 36px;
+    }
+
+    .about-us .part-two .video {
+        width: 38%;
+    }
+
+
+
+}
+
+@media screen and (max-width:992px) {
+
+    .about-us,
+    .about-us .part-two,
+    .about-us .part-one {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .about-us .part-one .image,
+    .about-us .part-one .text {
+        width: 85%;
+    }
+
+    .about-us .part-two .video,
+    .about-us .part-two .cards {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width:576px) {
+
+    .about-us .part-one .image,
+    .about-us .part-one .text {
+        width: 100%;
+    }
+
+    .about-us .part-two .video,
+    .about-us .part-two .cards {
+        width: 100%;
+    }
+
+    .about-us .part-two .cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-us .part-one .text .list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .about-us .part-one .text .title-section h1 {
+        font-size: 25px;
+    }
+}

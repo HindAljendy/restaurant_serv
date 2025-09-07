@@ -1,0 +1,50 @@
+.slider-box {
+    width: 100%;
+    height: 100%;
+    padding: 24px;
+    background-color: #ddbb87;
+
+    border: 1px solid #ddbb87;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: var(--font-opensans);
+
+    transition: 0.3s ease,
+
+
+}
+.change_bg{
+    background-color: transparent;
+}
+.slider-box .details_1 {
+    display: flex;
+    gap: 20px;
+}
+
+.slider-box .details_1 div h4 {
+    font-size: 24px;
+    font-family: inherit;
+    font-weight: 600;
+    color: var( --bs-secondary);
+    text-transform: capitalize;
+    margin-bottom: 8px;
+
+}
+
+.slider-box .details_1 p {
+    font-size: 16px;
+    font-family: inherit;
+    color:var(--bs-secondary);
+}
+
+.slider-box .details_2 .long-text {
+    font-size: 16px;
+    font-family: inherit;
+    color: var(--bs-secondary);
+    margin-top: 10px;
+}
+.slider-box .details_2 {
+    border-top: 1px solid var( --bs-secondary);
+}
+

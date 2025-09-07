@@ -1,0 +1,13 @@
+.title-section h1 {
+    color: var(--bs-dark);
+    font-size: 48px;
+    font-family: var(--font-playball);
+    font-weight: 400;
+    margin-bottom: 48px;
+}
+
+@media screen and (max-width:576px) {
+    .title-section h1 {
+        font-size: 30.7px;
+    }
+}

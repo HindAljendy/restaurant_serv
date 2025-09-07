@@ -1,0 +1,114 @@
+.team-card {
+    width: 25%;
+    height: 400px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.team-card img {
+    width: 100%;
+    height: 300px;
+
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.team-card .team-details {
+    width: 100%;
+    padding-block: 16px;
+    text-align: center;
+    background-color: var(--bs-dark);
+    font-family: var(--font-opensans);
+
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+
+    position: relative;
+    transform: translateY(-5%);
+
+    transition: 0.9s ease;
+}
+
+.team-card .team-details h4 {
+    font-size: 24px;
+    font-family: inherit;
+    color: var(--bs-primary);
+    font-weight: 600;
+    margin-bottom: 8px;
+
+    transition: 0.9s ease;
+}
+
+.team-card .team-details p {
+    font-size: 16px;
+    font-family: inherit;
+    color: var(--bs-section-white);
+}
+
+.team-card .icons-contact {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    transition: 2s ease;
+}
+
+.team-card .icons-contact a {
+    width: 38px;
+    height: 38px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: var(--bs-primary);
+    color: var(--bs-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 10px;
+
+    opacity: 0;
+    transition: .9s ease;
+}
+
+.team-card .icons-contact a:hover {
+    background-color: var(--bs-dark);
+    color: var(--bs-primary);
+}
+
+.team-card .icons-contact a:first-child {
+    opacity: 1;
+}
+
+.team-card:hover .icons-contact a {
+    opacity: 1;
+}
+
+.team-card:hover .team-details {
+    background-color: var(--bs-primary);
+}
+
+.team-card:hover .team-details h4 {
+    color: var(--bs-dark);
+}
+
+/* Responsive Team card */
+@media screen and (max-width:1040px) {
+    .team-card {
+        width: 48%;
+        margin-block: 12px;
+    }
+}
+
+@media screen and (max-width:776px) {
+    .team-card {
+        width: 100%;
+        height: 100%;
+    }
+
+    .team-card img {
+        width: 100%;
+        height: 100%;
+    }
+
+
+}

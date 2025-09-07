@@ -1,0 +1,42 @@
+.about-card {
+    background-color: var(--bs-primary);
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+    width: 198px;
+    height:100%;
+}
+
+.about-card .icon {
+    font-size: 80px;
+    color: var(--bs-section-white);
+}
+.about-card h1 {
+    font-size: 56px;
+    color: var(--bs-dark);
+    font-family: var(--font-playball);
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.about-card p {
+    font-size: 16px;
+    color: var(--bs-dark);
+    text-align: center;
+    text-transform: uppercase;
+    font-family: var(--font-opensans);
+}
+
+
+@media screen and (max-width:1342px) and (min-width:1040px) {
+    .about-card h1 {
+        font-size: 42px;
+    }
+    .about-card .icon {
+        font-size: 65px;
+    }
+}
+@media screen and (max-width:576px) {
+    .about-card {
+        width: 100%;
+    }
+}

@@ -1,0 +1,40 @@
+.hero-page{
+    width: 100%;
+    min-height: 60vh;
+    background-color: var(--bs-light);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-page  .title-heroPage{
+    font-size: 80px;
+    font-weight: 400;
+    color: var(--bs-dark);
+    font-family: var(--font-playball);
+    text-transform: capitalize;
+    margin-bottom: 24px;
+}
+
+.hero-page  ul{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
+.hero-page  ul li a {
+    font-size: 16px;
+    font-family: var(--font-opensans);
+    color: var(--bs-primary);
+}
+.hero-page  ul li:last-child a{
+    color: var(--bs-dark);
+}
+.hero-page  ul li:nth-child(2):before ,
+.hero-page  ul li:last-child:before{
+    content: "/";
+    font-size: 20px;
+    font-weight: bold;
+    color: #6c757d;
+    padding-right: 8px;
+}

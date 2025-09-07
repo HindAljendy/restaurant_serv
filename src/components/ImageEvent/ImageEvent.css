@@ -1,0 +1,134 @@
+.image-event {
+    width: 25%;
+}
+
+.image-event .image-container {
+    width: 100%;
+
+    /* تحديد الارتفاع */
+    height: 258.56px;
+
+    border-radius: 8px;
+
+    position: relative;
+
+    margin-bottom: 24px;
+}
+
+.image-event .image-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.image-event .image-container .overlay-describe {
+    width: 100%;
+    height: 100%;
+
+    padding: 24px;
+    background-color: rgba(212, 167, 98, 0.7);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    transition: .5s;
+}
+
+.image-event .image-container .overlay-describe h4 {
+    font-size: 24px;
+    font-family: var(--font-opensans);
+    font-weight: 600;
+    color: var(--bs-dark);
+    text-align: start;
+    text-transform: capitalize;
+}
+
+.image-event .image-container .overlay-describe .icon {
+    font-size: 32px;
+    margin: auto auto;
+    cursor: pointer;
+}
+
+.image-event .image-container:hover .overlay-describe {
+    opacity: 1;
+    transition: .5s;
+}
+
+/* image scale */
+.show-image {
+    display: none;
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.show-image .image-scale {
+    width: 500px;
+    height: 500px;
+    border-radius: 3px;
+    border: 4px solid var(--bs-section-white);
+
+    position: relative;
+}
+
+.show-image .image-scale img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.show-image .image-scale .icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    font-size: 25px;
+    color: var(--bs-section-white);
+    cursor: pointer;
+}
+
+/* Event Image Section responsive */
+
+@media screen and (max-width:1040px) {
+    .image-event {
+        width: 48%;
+    }
+
+    .show-image .image-scale {
+        width: 80%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .image-event {
+        width: 100%;
+    }
+
+    .image-event .image-container {
+        width: 100%;
+
+        /* تحديد الارتفاع */
+        height: 437px;
+    }
+
+    .show-image .image-scale {
+        width: 90%;
+        height: auto;
+    }
+}

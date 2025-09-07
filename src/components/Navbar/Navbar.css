@@ -1,0 +1,218 @@
+/* main-container */
+.main-container {
+    width: 100%;
+    padding-inline: 24px;
+    background-color: var(--bs-light);
+}
+.bottom-line{
+    border-bottom: 1px solid var(--bs-line);
+}
+
+/* navbar  style*/
+.navbar {
+    width: 85%;
+    margin: 0 auto;
+    padding-block: 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* logo */
+.navbar .logo {
+    color: var(--bs-primary);
+    font-weight: 700;
+    font-size: 40px;
+    font-family: var(--font-playball);
+}
+
+.navbar .logo span {
+    color: var(--bs-dark);
+}
+
+/* navlinks */
+.navbar .navlinks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.navbar .navlinks a {
+    font-size: 17px;
+    color: var(--bs-secondary);
+    padding: 10px 12px;
+    font-weight: 600;
+    font-family: var(--font-opensans);
+    transition: .3s ease-in-out;
+}
+
+.navbar .navlinks a.active,
+.navbar .navlinks a:hover {
+    color: var(--bs-primary);
+}
+
+/* dropdown pages  */
+.navbar .navlinks li.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: block;
+
+    position: absolute;
+    top: 100%;
+    /* Below the main item  (li.dropdown)  */
+    left: 0;
+    background-color: var(--bs-light);
+    border-radius: 10px;
+    text-align: start;
+    color: var(--bs-secondary);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding-block: 10px;
+    min-width: 150px;
+
+    z-index: 10;
+}
+
+
+.dropdown-content li {
+    display: block;
+    width: 100%;
+}
+
+.dropdown-content li a {
+    display: block;
+    width: 100%;
+}
+
+.dropdown-content li a:hover {
+    color: var(--bs-light) !important;
+    background-color: var(--bs-primary);
+}
+
+.navbar .navlinks a.dropdown-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .navlinks a.dropdown-toggle .icon {
+    font-size: 30px;
+    margin-top: 5px;
+}
+
+
+/* search */
+.navbar .buttons {
+    display: block;
+}
+
+.navbar .buttons .search {
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--bs-primary);
+    text-align: center;
+    margin-right: 24px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.navbar .buttons .search:hover {
+    color: var(--bs-primary);
+    background-color: var(--bs-black);
+}
+
+.hamburger {
+    display: none;
+    padding: 8px 16px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 8px;
+    cursor: pointer;
+}
+.outline-style{
+    outline: 3px solid rgba(0, 0, 0, .55);
+}
+.hamburger .menu-icon {
+    color: var(--bs-primary);
+    font-size: 20px;
+}
+
+
+/* responsive navbar */
+@media screen and (max-width: 1200px) {
+    .hamburger {
+        display: block;
+    }
+
+    .navbar .buttons {
+        display: none;
+    }
+
+    .navbar {
+        width: 85%;
+    }
+
+    .navbar .logo {
+        font-size: 29.5px;
+    }
+
+    .navbar .navlinks {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        background-color: var(--bs-light);
+        border-bottom: 1px solid var(--bs-line);
+        padding-inline: 24px;
+        padding-bottom: 24px;
+        position: absolute;
+        left: 0;
+        top: 70px;
+
+        transition: transform 0.3s ease, opacity 0.3s ease;
+
+        /*
+            nav-menu =>  show when opacity : 1  / hide when opacity:0
+        */
+        z-index: 10;
+    }
+
+    .show-navlinks {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .hide-navlinks {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    .navbar .navlinks li {
+        display: block;
+        width: 100%;
+    }
+
+    .navbar .navlinks a {
+        display: block;
+        width: 100%;
+    }
+
+    .dropdown-content {
+        display: block;
+        width: 100%;
+        position: static;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+
+}
+@media screen and (max-width: 576px) {
+    .navbar {
+        width: 100%;
+    }
+
+}

@@ -1,0 +1,48 @@
+.section-container {
+    width: 100%;
+    padding-inline: 24px;
+    background-color: var(--bs-section-white);
+}
+
+.section {
+    width: 85%;
+    margin: 0 auto;
+    padding-block: 48px;
+}
+
+.blog .content {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    align-items:center ;
+}
+
+/* heading section */
+
+.heading-section {
+    text-align: center;
+}
+
+.heading-section .small-title p {
+    margin-bottom: 16px !important;
+    margin: 0 auto;
+}
+
+/* Blog Section responsive */
+
+@media screen and (max-width:1040px) {
+    .blog {
+        width: 85%;
+    }
+
+    .blog .content {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .blog {
+        width: 100%;
+    }
+}

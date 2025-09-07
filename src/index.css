@@ -1,0 +1,33 @@
+/* 2 Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playball&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    /* colors  */
+    --bs-light: #FFFCF8;
+    --bs-section-white: #FFF;
+    --bs-black: #000000;
+    --bs-primary: #d4a762;
+    --bs-dark: #050709;
+    --bs-secondary:#0000008c;
+    --bs-line: #0000000d;
+    --bs-light-gray:#9A9A9A;
+
+    /* fonts */
+    --font-opensans: "Open Sans", sans-serif;
+    --font-playball:"Playball", cursive;
+}

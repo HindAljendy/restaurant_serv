@@ -1,0 +1,56 @@
+.contact-info {
+    padding: 24px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid var(--bs-primary);
+
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+
+    margin-bottom: 24px;
+}
+
+.contact-info .icon {
+    color: var(--bs-primary);
+    font-size: 32px;
+}
+
+.contact-info div h4 {
+    font-size: 24px;
+    font-family: inherit;
+    color: var(--bs-dark);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.contact-info div p {
+    font-size: 16px;
+    color: var(--bs-light-gray);
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.contact-info div:nth-child(2) .paragraph {
+    margin-bottom: 8px;
+}
+
+.contact-form .part-two .contact-info:first-child p {
+    margin-bottom: 16px;
+}
+
+.contact-form .part-two .contact-info:last-child {
+    margin-bottom: 0;
+}
+
+/* Contact Info Section responsive */
+
+@media screen and (max-width:1040px) {
+    .contact-info div h4 {
+        font-size: 22.4px;
+    }
+
+    .contact-info div p {
+        font-size: 15px;
+    }
+}

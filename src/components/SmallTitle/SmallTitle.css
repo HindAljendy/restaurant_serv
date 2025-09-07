@@ -1,0 +1,14 @@
+.small-title p{
+    width: max-content;
+    border: 1px solid #d4a762;
+    border-radius: 50rem
+        /* 800px */
+    ;
+    font-size: 14px;
+    font-family: var(--font-opensans);
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 4px 24px;
+    margin-bottom: 24px;
+    background-color: var(--bs-light);
+}

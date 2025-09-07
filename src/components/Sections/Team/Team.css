@@ -1,0 +1,29 @@
+.our-team .content {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    align-items: center;
+}
+
+/* Responsive team */
+@media screen and (max-width:1040px) {
+    .our-team {
+        width: 85%;
+    }
+
+    .our-team  .content{
+        flex-wrap: wrap;
+        gap: 0;
+    }
+
+}
+
+@media screen and (max-width:576px) {
+    .our-team  {
+        width: 100%;
+    }
+
+    .our-team  .content  {
+        flex-direction: column;
+    }
+}

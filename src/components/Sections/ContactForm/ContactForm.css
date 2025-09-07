@@ -1,0 +1,112 @@
+.contact-form {
+    background-color: var(--bs-light);
+    padding: 48px;
+    border-radius: 8px;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    font-family: var(--font-opensans);
+
+}
+
+.contact-form .title-section h1 {
+    font-size: 39.6px;
+}
+
+.contact-form .All-parts {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.contact-form .part-one {
+    width: 58.33%;
+}
+
+.contact-form .part-two {
+    width: 41.6%;
+}
+
+.contact-form .part-one p {
+    font-size: 16px;
+    font-family: inherit;
+    color: var(--bs-light-gray);
+    margin-bottom: 24px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.contact-form .part-one form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.contact-form .part-one form textarea {
+    resize: vertical;
+}
+
+.contact-form .part-one form input[type='text'] {
+    height: 58px;
+}
+
+.contact-form .part-one form input[type='text'],
+.contact-form .part-one form textarea {
+    width: 100%;
+    display: block;
+    padding: 16px;
+    background-color: transparent;
+    border-radius: 8px;
+    border: 1px solid var(--bs-primary);
+    color: var(--bs-light-gray);
+    font-size: 16px;
+    font-family: var(--font-opensans);
+    font-weight: 400;
+
+    transition: box-shadow 0.5s ease-in-out;
+}
+
+.contact-form .part-one form input[type='text']:focus,
+.contact-form .part-one form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 .25rem rgba(212, 167, 98, .25);
+}
+
+.contact-form .part-one form input[type='submit'] {
+    width: 100%;
+    border: none;
+    padding: 16px;
+}
+
+/* Contact Form Section responsive */
+
+@media screen and (max-width:1040px) {
+    .contact-form .part-one {
+        width: 50%;
+    }
+
+    .contact-form .part-two {
+        width: 50%;
+    }
+
+}
+
+@media screen and (max-width:820px) {
+    .contact-form{
+        width: 100%;
+    }
+    .contact-form .All-parts {
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+    }
+
+    .contact-form .part-one {
+        width: 100%;
+    }
+
+    .contact-form .part-two {
+        width: 100%;
+    }
+
+}
