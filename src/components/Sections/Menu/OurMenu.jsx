@@ -5,43 +5,33 @@ import TitleSection from '../../TitleSection/TitleSection'
 import FoodMenu from '../../../data/FoodMenu'
 import MenuItem from '../../MenuItem/MenuItem'
 import Button from '../../Button/Button'
-import { motion } from 'framer-motion'
+import { delay, motion } from 'framer-motion'
+
 
 const OurMenu = () => {
 
     const containerVariants = {
-        hidden: {
-            opacity: 0,
-            y: 300,
-        },
+        hidden: { opacity: 0, y: 300 },
         visible: {
             opacity: 1,
             y: 0,
             transition: {
-                staggerChildren: 0.3,
-                delay: 0.5
+                staggerChildren: 0.3, // زمن بين ظهور كل عنصر
+                delayChildren: 0.3,
+                duration:1 ,
             },
         },
     };
 
     const itemVariants = {
-        hidden: {
-            opacity: 0,
-            y: 800,
-        },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                duration: 1,
-            },
-        },
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0 },
     };
 
     const commonTransition = {
         duration: 2,
         type: 'spring',
-        stiffness: 30,
+        stiffness: 40,
         damping: 8,
         mass: 1,
     };
@@ -104,18 +94,19 @@ const OurMenu = () => {
 
                         {
                             categories.map(category => (
-
                                 <motion.div
-                                    variants={itemVariants}
                                     key={category}
+                                    variants={itemVariants}
                                 >
-
                                     <Button
                                         title={category}
                                         onClick={() => handleCategoryChange(category)}
                                         className={selectedCategory === category ? 'active' : ''}
+
                                     />
+
                                 </motion.div>
+
 
                             ))
                         }
@@ -123,15 +114,12 @@ const OurMenu = () => {
                     </motion.div>
 
                     <motion.div
+                        key={selectedCategory}
                         variants={containerVariants}
                         initial="hidden"
                         whileInView="visible"
                         transition={{
-                            duration: 2,
-                            type: 'spring',
-                            stiffness: 30,
-                            damping: 8,
-                            mass: 1,
+                            ...commonTransition,
                         }}
                         viewport={{ once: true }}
 
@@ -149,6 +137,8 @@ const OurMenu = () => {
                                             price={food.price}
                                             description={food.description}
                                             variants={itemVariants}
+
+
                                         />
                                     ))}
                                 </div>

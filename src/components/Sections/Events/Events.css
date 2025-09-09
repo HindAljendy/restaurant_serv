@@ -27,11 +27,6 @@
     border: 1px solid var(--bs-primary);
 }
 
-.event .button:hover {
-    background-color: var(--bs-primary);
-    color: var(--bs-dark);
-}
-
 /* Event Section responsive */
 
 @media screen and (max-width:1040px) {

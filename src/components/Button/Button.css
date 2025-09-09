@@ -1,17 +1,18 @@
 .button {
-    color: var(--bs-black);
     padding: 8px 24px;
     background-color: var(--bs-primary);
     border-radius: 50rem
         /* 800px */
     ;
-    font-weight: 600;
-    font-size: 16px;
     font-family: var(--font-opensans);
+    font-size: 16px;
+    color: var(--bs-black);
     cursor: pointer;
     transition: .3s ease-in-out;
 
 }
+
+
 
 .button:hover {
     color: var(--bs-primary);
@@ -19,13 +20,13 @@
 }
 
 /* events */
-.Events .button.active{
-    color: var(--bs-black) ;
+.Events .button.active {
+    color: var(--bs-black);
     background-color: var(--bs-primary);
 }
 
 /* menu  */
-.Menus .button.active{
-    color: var(--bs-black) ;
+.Menus .button.active {
+    color: var(--bs-black);
     background-color: var(--bs-primary);
 }

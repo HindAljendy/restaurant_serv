@@ -4,14 +4,19 @@ import { Link } from 'react-router-dom'
 
 
 
-const Button = ({title , icon , onClick , className , path }) => {
+const Button = ({ title, icon, onClick, className, path }) => {
     return (
         <>
+
             <Link to={path} className={`button ${className}`} onClick={onClick}>
-                {title} 
-                {icon}
+                {title} {icon}
             </Link>
+
         </>
+
+
+
+
     )
 }
 

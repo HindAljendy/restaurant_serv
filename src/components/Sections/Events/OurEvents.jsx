@@ -8,40 +8,29 @@ import EventsImages from '../../../data/EventsImages'
 import { delay, motion } from 'framer-motion'
 
 const OurEvents = () => {
-    
+
     const containerVariants = {
-        hidden: {
-            opacity: 0,
-            y: 300,
-        },
+        hidden: { opacity: 0, y: 300 },
         visible: {
             opacity: 1,
             y: 0,
             transition: {
-                staggerChildren: 0.3,
-                delay: 0.5
+                staggerChildren: 0.3, // زمن بين ظهور كل عنصر
+                delayChildren: 0.3,
+                duration:1 ,
             },
         },
     };
 
     const itemVariants = {
-        hidden: {
-            opacity: 0,
-            y: 800,
-        },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                duration: 1,
-            },
-        },
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0 },
     };
 
     const commonTransition = {
         duration: 2,
         type: 'spring',
-        stiffness: 30,
+        stiffness: 40,
         damping: 8,
         mass: 1,
     };
@@ -106,19 +95,13 @@ const OurEvents = () => {
 
                         {
                             titles.map(title => (
-
-                                <motion.div
-                                    variants={itemVariants}
+                                <Button
                                     key={title}
-                                >
-                                    <Button
-
-                                        title={title}
-                                        onClick={() => handleTitleChange(title)}
-                                        className={selectedTitle === title ? 'active' : ''}
-                                    />
-                                </motion.div>
-
+                                    title={title}
+                                    onClick={() => handleTitleChange(title)}
+                                    className={selectedTitle === title ? 'active' : ''}
+                                    variants={itemVariants}
+                                />
                             ))
                         }
                     </motion.div>
@@ -126,15 +109,12 @@ const OurEvents = () => {
 
 
                     <motion.div
+                        key={selectedTitle}   // تحديث الحالة عند تغيير الفلترة
                         variants={containerVariants}
                         initial="hidden"
                         whileInView="visible"
                         transition={{
-                            duration: 2,
-                            type: 'spring',
-                            stiffness: 30,
-                            damping: 8,
-                            mass: 1,
+                            ...commonTransition,
                         }}
                         viewport={{ once: true }}
 
@@ -146,7 +126,13 @@ const OurEvents = () => {
                             chunks.map((chunk, index) => (
                                 <div key={index} className="part">
                                     {chunk.map((event) => (
-                                        <ImageEvent key={event.id} title={event.title} imgEvent={event.imgEvent} variants={itemVariants} />
+
+                                        <ImageEvent
+                                            key={event.id}
+                                            title={event.title}
+                                            imgEvent={event.imgEvent}
+                                            variants={itemVariants}
+                                        />
                                     ))}
                                 </div>
                             ))
