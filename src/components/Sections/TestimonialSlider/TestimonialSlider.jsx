@@ -14,7 +14,6 @@ const TestimonialSlider = () => {
     const [centerIndex, setCenterIndex] = useState(0);
 
 
-
     var settings = {
         infinite: true,
         dots: true,
@@ -64,3 +63,4 @@ const TestimonialSlider = () => {
 }
 
 export default TestimonialSlider
+
